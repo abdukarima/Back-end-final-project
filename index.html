@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Oil Cake Deals</title>
+</head>
+
+<body>
+    <script>
+function validate(){
+    var allok = true;
+    if(data.Date.value == ""){
+        alert('Invalid input');
+        return false;
+    }
+    if(data.Broker_Name.value == ""){
+        alert('Invalid input');
+        return false;
+    }
+    if(data.Party_Name.value == ""){
+        alert('Invalid input');
+        return false;
+    }
+    if(isNaN(data.Party_Mobile_Number.value)){
+        alert('Invalid input')
+        return false;
+    }
+    if(data.GST_Number.value == ""){
+        alert('Invalid input');
+        return false;
+    }
+    if(data.Location.value == ""){
+        alert('Invalid input');
+        return false;
+    }
+    if(data.Quantity.value == ""){
+        alert('Invalid input');
+        return false;
+    }
+    if(isNaN(data.Rate.value)){
+        alert('Invalid input')
+        return false;
+    }
+    if(data.Payment.value == ""){
+        alert('Invalid input');
+        return false;
+    }
+    if(data.Brand.value == ""){
+        alert('Invalid input');
+        return false;
+    }
+    document.trip.Submit.disabled="disabled";
+    return true;
+}
+</script>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h1>Oil Cake Deals</h1>
+            </div>
+            <div class="col-12">
+                <h3>Shri Balaji Buildcon</h3>
+            </div>
+        </div>
+        <div class="container">
+            <form name="data" id="data"  data-toggle="validator" class="needs-validation" method="Post" action="insert.php" onSubmit="return validate();" novalidate>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Date">Date</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="date" class="form-control" name="Date" id="Date" aria-describedby="helpId" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Broker Name">Broker Name</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="text" class="form-control" name="Broker_Name" id="Broker_Name" aria-describedby="helpId" placeholder="Broker Name" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Party Name">Party Name</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="text" class="form-control" name="Party_Name" id="Party_Name" aria-describedby="helpId" placeholder="Party Name" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Party Name">Party Mobile Number</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="number" class="form-control" name="Party_Mobile_Number" id="Party_Mobile_Number" aria-describedby="helpId" placeholder="Party Mobile Number" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="GST Number">GST Number</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="text" class="form-control" name="GST_Number" id="GST_Number" aria-describedby="helpId" placeholder="GST Number" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Location">Location</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="text" class="form-control" name="Location" id="Location" aria-describedby="helpId" placeholder="Location" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Quantity/Katta">Quantity/Katta</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="text" class="form-control" name="Quantity" id="Quantity" aria-describedby="helpId" placeholder="Quantity/Katta" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Rate">Rate</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="number" class="form-control" name="Rate" id="Rate" aria-describedby="helpId" placeholder="Rate" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Condition">Payment Condition</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="text" class="form-control" name="Condition" id="Condition" aria-describedby="helpId" placeholder="Condition" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <label for="Brand">Brand</label>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <input type="text" class="form-control" name="Brand" id="Brand" aria-describedby="helpId" placeholder="Brand" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12">
+                          <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+         <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <h4>Devloped by LazY Devlopers</h4>
+               <h6> © 2020 Copyright:All Rights Reserved.</h6>
+            </div>
+            <!-- Copyright -->
+        </footer>
+     
+        <script>
+            document.querySelector("#Date").valueAsDate = new Date();
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hyperform/0.9.9/hyperform.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

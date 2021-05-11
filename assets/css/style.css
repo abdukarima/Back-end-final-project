@@ -1,0 +1,28 @@
+body {
+    background-color: antiquewhite;
+}
+
+.row {
+    padding: 10px;
+}
+
+.submit-button {
+    padding: 10px;
+    width: 100px;
+}
+.back{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(35, 68, 161);
+}
+
+.back:hover{
+    text-decoration: none;
+    color:rgb(00, 01, 255);
+    background-color:rgb(221, 52, 52);
+    border: 2px solid rgb(35, 68, 161);
+}
+
+label {
+    text-align: end;
+}
